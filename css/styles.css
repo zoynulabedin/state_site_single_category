@@ -10,7 +10,11 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
 :root {
+	font-family: "Inter", sans-serif;
 	--bs-blue: #0d6efd;
 	--bs-indigo: #6610f2;
 	--bs-purple: #6f42c1;
@@ -54,11 +58,11 @@
 	--bs-black-rgb: 0, 0, 0;
 	--bs-body-color-rgb: 33, 37, 41;
 	--bs-body-bg-rgb: 255, 255, 255;
-	--bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+	/* --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
 		"Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
 		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	--bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-		"Liberation Mono", "Courier New", monospace;
+		"Liberation Mono", "Courier New", monospace; */
 	--bs-gradient: linear-gradient(
 		180deg,
 		rgba(255, 255, 255, 0.15),
@@ -135,9 +139,8 @@ h1,
 .h1 {
 	margin-top: 0;
 	margin-bottom: 0.5rem;
-	font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-		Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-family: "Inter", sans-serif !important;
+
 	font-weight: 800;
 	line-height: 1.2;
 }
@@ -218,6 +221,7 @@ address {
 ol,
 ul {
 	padding-left: 2rem;
+	font-family: "Inter", sans-serif !important;
 }
 
 ol,
@@ -282,6 +286,7 @@ sup {
 a {
 	color: var(--bs-link-color);
 	text-decoration: none;
+	font-family: "Inter", sans-serif !important;
 }
 a:hover {
 	color: var(--bs-link-hover-color);
@@ -369,6 +374,7 @@ th {
 	border-color: inherit;
 	border-style: solid;
 	border-width: 0;
+	font-family: "Inter", sans-serif !important;
 }
 
 label {
@@ -377,6 +383,7 @@ label {
 
 button {
 	border-radius: 0;
+	font-family: "Inter", sans-serif !important;
 }
 
 button:focus:not(:focus-visible) {
@@ -11416,7 +11423,7 @@ ul.selection-list {
 	list-style: none;
 }
 
-ul.selection-list li i.fa {
+ul.selection-list li svg {
 	color: #0d99ff;
 	background: #0d99ff4f;
 	padding: 10px;
@@ -11429,9 +11436,6 @@ ul.selection-list li i.fa {
 	gap: 20px;
 }
 
-ul.selection-list li {
-	margin-bottom: 25px;
-}
 ul.selection-list li {
 	display: flex;
 	gap: 20px;
@@ -11632,6 +11636,9 @@ input {
 
 /* tablet */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+	.seclection-process h2 {
+		font-size: 40px;
+	}
 	.head-left h4 {
 		font-size: 24px;
 		line-height: 30px;
@@ -11640,10 +11647,26 @@ input {
 		margin-right: -38px;
 		margin-top: 27px;
 	}
+	.iconic-section {
+		flex-wrap: wrap;
+	}
 }
 
 /* Mobile Layout */
 @media only screen and (max-width: 767px) {
+	.seclection-process h2 {
+		font-size: 28px;
+		text-align: center;
+	}
+	.seclection-process p {
+		margin-bottom: 5px;
+	}
+	.seclection-process {
+		text-align: center;
+	}
+	button.Learn.More {
+		margin-bottom: 50px;
+	}
 	header.masthead {
 		height: 700px;
 	}
@@ -11654,6 +11677,9 @@ input {
 	.head-right {
 		margin-right: -38px;
 		margin-top: 27px;
+	}
+	.iconic-section {
+		flex-wrap: wrap;
 	}
 }
 .accordion {
@@ -11714,4 +11740,22 @@ ul.intro-list li a {
 	margin-bottom: 30px;
 	border-bottom: 1px solid #ddd;
 	padding-bottom: 20px;
+}
+
+body {
+	font-family: "Inter", sans-serif !important;
+}
+button.Learn.More {
+	border: none;
+	background: #0d99ff;
+	color: #fff;
+	width: 200px;
+	height: 60px;
+	margin-top: 25px;
+}
+.section.seclection-height {
+	height: 800px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
