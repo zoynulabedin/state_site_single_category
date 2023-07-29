@@ -11492,7 +11492,7 @@ ul.selection-list li {
 	margin: 10px 0px;
 }
 .section.contact-section {
-	padding: 50px 0px;
+	padding: 100px 0px;
 }
 
 .contact-form input {
@@ -11510,16 +11510,18 @@ input:focus {
 }
 
 .photo-wrapper .photo-1 img {
-	width: 70%;
+	width: 64%;
 	text-align: right;
 	float: right;
 }
 
 .photo-2 img {
-	width: 74%;
+	width: 52%;
 	position: relative;
 	z-index: 2;
-	top: -235px;
+	top: -366px;
+	border: 4px solid#5199FF;
+	border-radius: 10px;
 }
 .footer-section {
 	background: #1b1b1b;
@@ -11754,8 +11756,46 @@ button.Learn.More {
 	margin-top: 25px;
 }
 .section.seclection-height {
-	height: 800px;
+	padding: 100px 0px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.section.contact-section {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.contact-form h3 {
+	font-size: 50px;
+	line-height: 64px;
+	font-weight: 600;
+	margin-bottom: 19px;
+}
+.contact-form textarea {
+	background: #e7e8eb;
+	border: none;
+	height: 121px;
+	margin-bottom: 14px;
+}
+
+.photo-wrapper {
+	margin-right: 30px;
+}
+.photo--photo img {
+	max-width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+	.contact-form h3 {
+		font-size: 28px;
+		text-align: center;
+	}
+	.contact-form button {
+		width: 100%;
+	}
+	.section.seclection-height {
+		padding: 30px 0px;
+	}
 }
