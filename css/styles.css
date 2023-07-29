@@ -11787,6 +11787,40 @@ button.Learn.More {
 	max-width: 100%;
 }
 
+.subs-bg {
+	background-size: cover;
+	background-position: center;
+	height: 250px;
+	background: #5199ff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+}
+.subs-bg h1 {
+	font-size: 36px;
+	font-weight: 700;
+}
+.subscribe-form {
+	width: 100%;
+}
+.subscribe-form input {
+	border: none;
+	background: #fff;
+	padding: 15px;
+	border-radius: 5px;
+	width: 80%;
+}
+
+.subscribe-form button {
+	background: #5199ff;
+	border: none;
+	padding: 10px;
+	color: #fff;
+	position: relative;
+	left: -99px;
+	border-radius: 5px;
+}
 @media only screen and (max-width: 767px) {
 	.contact-form h3 {
 		font-size: 28px;
