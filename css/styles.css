@@ -10999,7 +10999,7 @@ footer {
 
 header.masthead {
 	position: relative;
-	margin-bottom: 3rem;
+
 	padding-top: calc(8rem + 57px);
 	padding-bottom: 8rem;
 	background: no-repeat center center;
@@ -11014,8 +11014,9 @@ header.masthead:before {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #212529;
-	opacity: 0.5;
+	background-image: url("../assets/img/overlay.png");
+	background-position: center;
+	background-size: cover;
 }
 header.masthead .page-heading,
 header.masthead .post-heading,
@@ -11157,7 +11158,7 @@ body {
 	text-decoration: none;
 }
 .container {
-	width: 1620px;
+	max-width: 1620px;
 }
 .header-area {
 	padding: 20px 0px;
@@ -11334,6 +11335,7 @@ ul.intro-list {
 .city-wrapper {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 .city-box ul {
 	margin: 0;
@@ -11366,6 +11368,9 @@ ul.intro-list {
 	padding-bottom: 100px;
 }
 
+.guide-item {
+	position: relative;
+}
 .guide-item img {
 	max-width: 100%;
 	position: relative;
@@ -11639,6 +11644,9 @@ input {
 
 /* Mobile Layout */
 @media only screen and (max-width: 767px) {
+	header.masthead {
+		height: 700px;
+	}
 	.head-left h4 {
 		font-size: 24px;
 		line-height: 30px;
@@ -11647,4 +11655,63 @@ input {
 		margin-right: -38px;
 		margin-top: 27px;
 	}
+}
+.accordion {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 10px;
+}
+.accordion .icon {
+	border: 1px solid #ddd;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	line-height: 40px;
+	text-align: center;
+	color: #000000a1;
+}
+.tab-content-wrapper h4 {
+	font-size: 32px;
+	font-weight: bold;
+}
+ul.intro-list li a {
+	color: #5199ff;
+	font-size: 24px;
+	font-weight: 500;
+}
+/* Styling for the accordion header (plus/minus icon) */
+.accordion-header {
+	padding: 10px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Styling for the plus/minus icons */
+.accordion-header .icon {
+	margin-right: 10px;
+}
+
+/* Styling for the accordion content (hidden by default) */
+.accordion-content {
+	display: none;
+	padding: 10px;
+}
+
+/* Styling for the accordion content when it's open */
+.accordion.open .accordion-content {
+	display: block;
+}
+.tab-content-wrapper.acc {
+	background: #fff;
+	padding: 37px;
+}
+
+.tab-content-wrapper.acc h4 {
+	color: #0d99ff;
+	font-size: 32px;
+	font-weight: 700;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 20px;
 }
