@@ -11525,7 +11525,7 @@ input:focus {
 }
 .footer-section {
 	background: #1b1b1b;
-	padding-top: 100px;
+	padding-top: 170px;
 }
 .contact-info span {
 	color: #fff;
@@ -11555,6 +11555,8 @@ input:focus {
 }
 .divider-fb {
 	border-top: 1px solid #dddddd2e;
+	margin-top: 30px;
+	margin-bottom: 20px;
 }
 
 li.call-action a {
@@ -11638,6 +11640,12 @@ input {
 
 /* tablet */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+	.subs-bg h1 {
+		font-size: 28px;
+	}
+	.subscribe-form input {
+		width: 70%;
+	}
 	.seclection-process h2 {
 		font-size: 40px;
 	}
@@ -11821,7 +11829,77 @@ button.Learn.More {
 	left: -99px;
 	border-radius: 5px;
 }
+
+.section.section-subscribe {
+	position: relative;
+	z-index: 2;
+	bottom: -126px;
+}
+.footer-bottom p {
+	margin: 0;
+	padding: 10px 0px;
+	color: #fff;
+	opacity: 0.5;
+}
+.contact-info {
+	color: #fff;
+	line-height: 30px;
+}
+
+.contact-info svg {
+	color: #109cf1;
+}
+
+.contact-info a {
+	opacity: 0.5;
+}
+.contact-info a {
+	opacity: 0.5;
+}
+
+.widgets ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.widgets ul li a {
+	color: #fff;
+	opacity: 0.5;
+	line-height: 35px;
+}
+.widgets li svg {
+	color: #5199ff;
+	margin-right: 9px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.subscribe-form input {
+		width: 70%;
+	}
+	.subs-bg h1 {
+		font-size: 28px;
+	}
+}
 @media only screen and (max-width: 767px) {
+	.footer-widgets-wrapper {
+		text-align: center;
+	}
+	.footer-bottom {
+		text-align: center;
+	}
+	.widgets {
+		margin-bottom: 30px;
+	}
+	.subscribe-form {
+		text-align: center;
+	}
+	.subs-bg h1 {
+		font-size: 22px;
+		text-align: center;
+	}
+	.subscribe-form input {
+		width: 60%;
+	}
 	.contact-form h3 {
 		font-size: 28px;
 		text-align: center;
