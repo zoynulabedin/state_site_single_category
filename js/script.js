@@ -137,7 +137,7 @@ const cityNames = [
 ];
 
 const citiesPerPage = 20; // Number of cities to add per click
-let currentCityIndex = 0; // Keeps track of the current index for adding cities
+let currentCityIndex = 21; // Keeps track of the current index for adding cities
 
 function addCities() {
 	const cityListElement = document.getElementById("city_list_ul");
