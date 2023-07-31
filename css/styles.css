@@ -12057,3 +12057,7 @@ div#city_list {
 	justify-content: center;
 	margin-top: 21px;
 }
+.tab-content-wrapper.city_list {
+	text-align: center;
+	color: #5199ff;
+}
