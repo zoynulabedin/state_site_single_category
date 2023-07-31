@@ -11932,3 +11932,10 @@ button.Learn.More {
 		padding: 30px 0px;
 	}
 }
+
+div#city_list {
+	border-radius: 10px;
+	background: #fff;
+	padding: 30px;
+	padding-bottom: 72px;
+}
