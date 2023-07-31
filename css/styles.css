@@ -12088,3 +12088,6 @@ span {
 	/*! padding-bottom: 0px !important; */
 	margin-bottom: 0px !important;
 }
+.city-item {
+	height: 550px;
+}
