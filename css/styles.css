@@ -11010,11 +11010,10 @@ header.masthead {
 	padding-top: calc(8rem + 57px);
 	padding-bottom: 8rem;
 	background: no-repeat center center;
-	background-color: #6c757d;
 	background-size: cover;
 	background-attachment: scroll;
 }
-header.masthead:before {
+/* header.masthead:before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -11024,7 +11023,7 @@ header.masthead:before {
 	background-image: url("../assets/img/overlay.png");
 	background-position: center;
 	background-size: cover;
-}
+} */
 header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
