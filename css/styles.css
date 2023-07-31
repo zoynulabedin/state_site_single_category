@@ -11953,6 +11953,7 @@ div#city_list {
 	border-radius: 10px;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	background: #f3f4f7;
+	padding-bottom: 20px;
 }
 .city-content h5 {
 	color: #000;
@@ -12068,4 +12069,22 @@ div#city_list {
 }
 .city-read-more-button a:hover {
 	font-weight: 500;
+}
+
+.city-item.sponsored {
+	background: #0d99ff;
+	color: #fff;
+	padding-bottom: 0px;
+}
+.city-item.sponsored h5,
+span {
+	color: #fff;
+}
+.sponsored .city-content span {
+	color: #fff !important;
+}
+
+.sponsor-item {
+	/*! padding-bottom: 0px !important; */
+	margin-bottom: 0px !important;
 }
