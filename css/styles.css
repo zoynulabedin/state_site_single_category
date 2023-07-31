@@ -11013,6 +11013,20 @@ header.masthead {
 	background-size: cover;
 	background-attachment: scroll;
 }
+.head-left.city-left {
+	text-align: center;
+}
+.search-wrapper.city-search button {
+	width: inherit;
+	margin-left: 10px;
+}
+.head-wrapper.city-head-wrapper {
+	display: flex;
+	justify-content: center;
+}
+.search-wrapper.city-search .wrapper {
+	height: inherit;
+}
 /* header.masthead:before {
 	content: "";
 	position: absolute;
@@ -11587,6 +11601,14 @@ a#nav-link {
 	height: 381px;
 	margin: auto;
 	padding: 15px;
+}
+.search-form.city-form {
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(12.5px);
+	padding: 31px;
+	padding-bottom: 15px;
 }
 header.masthead {
 	height: 998px;
