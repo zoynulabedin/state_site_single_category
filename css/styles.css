@@ -12061,3 +12061,11 @@ div#city_list {
 	color: #5199ff;
 	text-align: center;
 }
+
+.city-read-more-button a:hover svg {
+	margin-left: 15px;
+	transition: 0.3s;
+}
+.city-read-more-button a:hover {
+	font-weight: 500;
+}
