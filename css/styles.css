@@ -2725,6 +2725,10 @@ textarea.form-control.is-valid {
 	z-index: 3;
 }
 
+.col-md-6.align-self-center.mr-5 {
+	/*! margin-right: -12px; */
+	padding-right: 111px;
+}
 .invalid-feedback {
 	display: none;
 	width: 100%;
@@ -11690,6 +11694,10 @@ input {
 
 /* Mobile Layout */
 @media only screen and (max-width: 767px) {
+	.col-md-6.align-self-center.mr-5 {
+		/*! margin-right: -12px; */
+		padding-right: 0px;
+	}
 	.seclection-process h2 {
 		font-size: 28px;
 		text-align: center;
