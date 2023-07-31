@@ -135,3 +135,52 @@ const cityNames = [
 	"Modesto",
 	"Birmingham",
 ];
+
+const citiesPerPage = 20; // Number of cities to add per click
+let currentCityIndex = 0; // Keeps track of the current index for adding cities
+
+function addCities() {
+	const cityListElement = document.getElementById("city_list_ul");
+
+	// Loop through the cityNames array and add cities based on the current index
+	for (
+		let i = currentCityIndex;
+		i < currentCityIndex + citiesPerPage && i < cityNames.length;
+		i++
+	) {
+		const cityNumber = i + 1;
+		const city = cityNames[i];
+
+		const listItem = document.createElement("li");
+		const spanElement = document.createElement("span");
+		spanElement.textContent = cityNumber + ".";
+
+		const anchorElement = document.createElement("a");
+		anchorElement.href = "";
+		anchorElement.textContent = city;
+
+		listItem.appendChild(spanElement);
+		listItem.appendChild(anchorElement);
+		cityListElement.appendChild(listItem);
+	}
+
+	// Update the currentCityIndex for the next set of cities to be added
+	currentCityIndex += citiesPerPage;
+
+	// Hide the "See More" button if all cities have been added
+	if (currentCityIndex >= cityNames.length) {
+		const seeMoreButton = document.getElementById("add_more_city");
+		seeMoreButton.style.display = "none";
+	}
+}
+
+// Add an event listener to the "See More" button
+document
+	.getElementById("add_more_city")
+	.addEventListener("click", function (event) {
+		event.preventDefault();
+		addCities();
+	});
+
+// Initially add the first set of cities when the page loads
+addCities();
