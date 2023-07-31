@@ -116,6 +116,9 @@ body {
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+body {
+	overflow-x: hidden;
+}
 
 hr {
 	margin: 1rem 0;
@@ -11998,6 +12001,27 @@ div#city_list {
 }
 
 @media only screen and (max-width: 767px) {
+	.tabs {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.city-input-wrap {
+		display: grid;
+	}
+	.city-input-wrap input,
+	select,
+	button {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.city-input-wrap select,
+	input {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.city-content h5 {
+		font-size: 20px;
+	}
 	.city-box ul {
 		display: grid;
 		/* flex-direction: row; */
