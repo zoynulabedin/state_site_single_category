@@ -298,6 +298,7 @@ const contentDivs = document.querySelectorAll(".tab-content-item ");
 listItems.forEach((item, index) => {
 	item.addEventListener("click", () => {
 		// Hide all content divs
+		
 		contentDivs.forEach((contentDiv) => contentDiv.classList.remove("active"));
 		// Show the selected content div
 		contentDivs[index].classList.add("active");
