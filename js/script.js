@@ -288,3 +288,23 @@ document
 
 // Initially add the first set of cities when the page loads
 addCities();
+
+// Get all the list items and content divs
+
+const listItems = document.querySelectorAll(".intro-list li");
+const contentDivs = document.querySelectorAll(".tab-content-item ");
+
+// Add click event listeners to the list items
+listItems.forEach((item, index) => {
+	item.addEventListener("click", () => {
+		// Hide all content divs
+		contentDivs.forEach((contentDiv) => contentDiv.classList.remove("active"));
+		// Show the selected content div
+		contentDivs[index].classList.add("active");
+
+		// Remove .active-bg class from all list items
+		listItems.forEach((li) => li.classList.remove("active-bg"));
+		// Add .active-bg class to the clicked list item
+		item.classList.add("active-bg");
+	});
+});

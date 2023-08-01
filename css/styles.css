@@ -12119,3 +12119,16 @@ span {
 .accordion-header span {
 	color: #000;
 }
+.tab-content-item {
+	display: none;
+}
+.active {
+	display: block;
+}
+.active-bg {
+	border-radius: 10px;
+	background: #0d99ff !important;
+}
+.active-bg a {
+	color: #fff !important;
+}
