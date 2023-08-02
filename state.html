@@ -37,7 +37,7 @@
 		<!-- Navigation-->
 		<nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
 			<div class="container px-4 px-lg-5">
-				<a class="navbar-brand" href="index.html">Start Bootstrap</a>
+				<!-- <a class="navbar-brand" href="index.html">Start Bootstrap</a> -->
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -52,24 +52,42 @@
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<ul class="navbar-nav ms-auto py-4 py-lg-0">
 						<li class="nav-item">
-							<a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html"
-								>Home</a
-							>
+							<a class="nav-link px-lg-3 py-3 py-lg-4" href="#hero">Home</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html"
-								>About</a
-							>
+						<li class="nav-item listing">
+							<button
+								class="tab-btn btn-tab nav-link px-lg-3 py-3 py-lg-4"
+								data-tab="city_list">
+								Top 12 Listings
+							</button>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html"
-								>Sample Post</a
-							>
+						<li class="nav-item city-info">
+							<button
+								class="tab-btn btn-tab nav-link px-lg-3 py-3 py-lg-4"
+								data-tab="city_ifno">
+								city Info
+							</button>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html"
-								>Contact</a
-							>
+						<li class="nav-item city">
+							<button
+								class="tab-btn btn-tab nav-link px-lg-3 py-3 py-lg-4"
+								data-tab="city">
+								City
+							</button>
+						</li>
+						<li class="nav-item faq">
+							<button
+								class="tab-btn btn-tab nav-link px-lg-3 py-3 py-lg-4"
+								data-tab="faq">
+								FAQs
+							</button>
+						</li>
+						<li class="nav-item guides">
+							<button
+								class="tab-btn btn-tab nav-link px-lg-3 py-3 py-lg-4"
+								data-tab="guides">
+								Guides
+							</button>
 						</li>
 						<li id="nav-item" class="nav-item">
 							<a id="nav-link" class="nav-link px-lg-3" href="#">Call Now</a>
@@ -80,35 +98,33 @@
 		</nav>
 		<!-- Page Header-->
 		<header
+			id="hero"
 			class="masthead"
-			style="background-image: url('assets/img/Vector 18.jpg')">
+			style="background-image: url('../assets/img/hero.png')">
 			<div class="container position-relative px-4 px-lg-5">
 				<div class="row gx-4 gx-lg-5 justify-content-center">
 					<div class="col-md-9 col-lg-8 col-xl-8">
-						<div class="search-wrapper">
-							<div class="wrapper">
-								<div class="head-wrapper">
-									<div class="head-left">
-										<h4>
-											Find The Best Dumpster Rental<br />
-											Companies in Texas
+						<div class="search-wrapper city-search">
+							<div class="city-content-wrapper">
+								<div class="head-wrapper city-head-wrapper">
+									<div class="head-left city-left">
+										<h4 id="site_title">
+											Get Instant Quote From The Best Dumpster<br />
+											Companies Near Me
 										</h4>
 										<p>Confirm your location to see quality pros near you</p>
 									</div>
-									<div class="head-right">
-										<span>50 near you</span>
-									</div>
 								</div>
-								<div class="search-form">
+								<div class="search-form city-form">
 									<form action="">
-										<div class="input-wrap">
+										<div class="input-wrap city-input-wrap">
 											<select name="" id="">
 												<option value="">City</option>
 											</select>
 											<input type="text" placeholder="Name" />
 											<input type="email" placeholder="Email" />
+											<button class="btn btn-primary">Search</button>
 										</div>
-										<button class="btn btn-primary">Search</button>
 									</form>
 								</div>
 							</div>
@@ -118,7 +134,7 @@
 			</div>
 		</header>
 
-		<div class="section tab-wrapperss">
+		<div class="section tab-wrapperss" id="tab-section">
 			<div class="tab-section">
 				<div class="container">
 					<div class="row">
@@ -127,12 +143,19 @@
 								<button class="tab-btn active" data-tab="main_content">
 									Main Content
 								</button>
-								<button class="tab-btn" data-tab="state_ifno">
-									State Info
+								<button class="tab-btn btn-city-list" data-tab="city_list">
+									Top 12 Listings
 								</button>
-								<button class="tab-btn" data-tab="city">City</button>
-								<button class="tab-btn" data-tab="faq">FAQs</button>
-								<button class="tab-btn" data-tab="guides">Guides</button>
+								<button class="tab-btn btn-city-info" data-tab="city_ifno">
+									city Info
+								</button>
+								<button class="tab-btn btn-city" data-tab="city">City</button>
+								<button class="tab-btn btn-city-faq" data-tab="faq">
+									FAQs
+								</button>
+								<button class="tab-btn btn-city-guides" data-tab="guides">
+									Guides
+								</button>
 							</div>
 						</div>
 					</div>
@@ -150,12 +173,11 @@
 												</li>
 												<li><a href="#content1">Title 1</a></li>
 												<li><a href="#content2">Title 2</a></li>
-												<!-- Add more list items if needed -->
 											</ul>
 										</div>
 										<div class="col-md-8">
 											<div class="tab-content-wrapper main-content">
-												<div id="Introduction" class="tab-content-item active">
+												<div id="Introduction" class="tab-content-item">
 													<h4>Introduction Title</h4>
 													<p>
 														Google's automated ranking systems are designed to
@@ -176,119 +198,163 @@
 														assessed against some of the questions outlined
 														here.
 													</p>
-													<p>
-														Google's automated ranking systems are designed to
-														present helpful, reliable information that's
-														primarily created to benefit people, not to gain
-														search engine rankings, in the top Search results.
-														This page is designed to help creators evaluate if
-														they're producing such content. Self-assess your
-														content Evaluating your own content against these
-														questions can help you gauge if the content you're
-														making is helpful and reliable. Beyond asking
-														yourself these questions, consider having others you
-														trust but who are unaffiliated with your site
-														provide an honest assessment. Also consider an audit
-														of the drops you may have experienced. What pages
-														were most impacted and for what types of searches?
-														Look closely at these to understand how they're
-														assessed against some of the questions outlined
-														here.
-													</p>
 												</div>
-												<div id="content1" class="tab-content-item">
-													<!-- Your Content 2 goes here -->
+												<div id="content1" class="tab-content-item active">
 													<h4>Title 1</h4>
-													<p>
-														Google's automated ranking systems are designed to
-														present helpful, reliable information that's
-														primarily created to benefit people, not to gain
-														search engine rankings, in the top Search results.
-														This page is designed to help creators evaluate if
-														they're producing such content. Self-assess your
-														content Evaluating your own content against these
-														questions can help you gauge if the content you're
-														making is helpful and reliable. Beyond asking
-														yourself these questions, consider having others you
-														trust but who are unaffiliated with your site
-														provide an honest assessment. Also consider an audit
-														of the drops you may have experienced. What pages
-														were most impacted and for what types of searches?
-														Look closely at these to understand how they're
-														assessed against some of the questions outlined
-														here.
-													</p>
-													<p>
-														Google's automated ranking systems are designed to
-														present helpful, reliable information that's
-														primarily created to benefit people, not to gain
-														search engine rankings, in the top Search results.
-														This page is designed to help creators evaluate if
-														they're producing such content. Self-assess your
-														content Evaluating your own content against these
-														questions can help you gauge if the content you're
-														making is helpful and reliable. Beyond asking
-														yourself these questions, consider having others you
-														trust but who are unaffiliated with your site
-														provide an honest assessment. Also consider an audit
-														of the drops you may have experienced. What pages
-														were most impacted and for what types of searches?
-														Look closely at these to understand how they're
-														assessed against some of the questions outlined
-														here.
-													</p>
+													<p>title 1</p>
 												</div>
 												<div id="content2" class="tab-content-item">
-													<!-- Your Content 3 goes here -->
 													<h4>Title 2</h4>
-													<p>
-														Google's automated ranking systems are designed to
-														present helpful, reliable information that's
-														primarily created to benefit people, not to gain
-														search engine rankings, in the top Search results.
-														This page is designed to help creators evaluate if
-														they're producing such content. Self-assess your
-														content Evaluating your own content against these
-														questions can help you gauge if the content you're
-														making is helpful and reliable. Beyond asking
-														yourself these questions, consider having others you
-														trust but who are unaffiliated with your site
-														provide an honest assessment. Also consider an audit
-														of the drops you may have experienced. What pages
-														were most impacted and for what types of searches?
-														Look closely at these to understand how they're
-														assessed against some of the questions outlined
-														here.
-													</p>
-													<p>
-														Google's automated ranking systems are designed to
-														present helpful, reliable information that's
-														primarily created to benefit people, not to gain
-														search engine rankings, in the top Search results.
-														This page is designed to help creators evaluate if
-														they're producing such content. Self-assess your
-														content Evaluating your own content against these
-														questions can help you gauge if the content you're
-														making is helpful and reliable. Beyond asking
-														yourself these questions, consider having others you
-														trust but who are unaffiliated with your site
-														provide an honest assessment. Also consider an audit
-														of the drops you may have experienced. What pages
-														were most impacted and for what types of searches?
-														Look closely at these to understand how they're
-														assessed against some of the questions outlined
-														here.
-													</p>
+													<p>title 2</p>
 												</div>
-												<!-- Add more content divs if needed -->
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="tab-content" id="state_ifno" style="display: none">
+								<div class="tab-content" id="city_list" style="display: none">
+									<div class="tab-content-wrapper city_list">
+										<h4>Top 12 Businesses</h4>
+										<div class="row" id="top_listings">
+											<div
+												class="col-sm-12 col-md-4 col-lg-3 my-5 sponsor-item">
+												<div class="city-item sponsored">
+													<img src="../assets/img/sponser.jpg" alt="" />
+													<div class="city-content">
+														<span>Sponsored</span>
+														<h5>7 Best House Insurance Companies of 2023</h5>
+														<span
+															><i class="fa-solid fa-location-dot"></i>New
+															Jersey, USA</span
+														>
+														<span
+															><i class="fa-solid fa-phone"></i>+123 456 789
+															6542</span
+														>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-12 col-md-4 col-lg-3 my-5">
+												<div class="city-item">
+													<img src="../assets/img/Rectangle 40940.png" alt="" />
+													<div class="city-content">
+														<h5>
+															7 Best House Insurance Companies of 2023 7 Best
+															House Insurance Companies of 2023
+														</h5>
+														<span
+															><i class="fa-solid fa-location-dot"></i>New
+															Jersey, USA</span
+														>
+														<span
+															><i class="fa-solid fa-phone"></i>+123 456 789
+															6542</span
+														>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-12 col-md-4 col-lg-3 my-5">
+												<div class="city-item">
+													<img src="../assets/img/Rectangle 40940.png" alt="" />
+													<div class="city-content">
+														<h5>7 Best House Insurance Companies of 2023</h5>
+														<span
+															><i class="fa-solid fa-location-dot"></i>New
+															Jersey, USA</span
+														>
+														<span
+															><i class="fa-solid fa-phone"></i>+123 456 789
+															6542</span
+														>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-12 col-md-4 col-lg-3 my-5">
+												<div class="city-item">
+													<img src="../assets/img/Rectangle 40940.png" alt="" />
+													<div class="city-content">
+														<h5>7 Best House Insurance Companies of 2023</h5>
+														<span
+															><i class="fa-solid fa-location-dot"></i>New
+															Jersey, USA</span
+														>
+														<span
+															><i class="fa-solid fa-phone"></i>+123 456 789
+															6542</span
+														>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-12 col-md-4 col-lg-3 my-5">
+												<div class="city-item">
+													<img src="../assets/img/Rectangle 40940.png" alt="" />
+													<div class="city-content">
+														<h5>7 Best House Insurance Companies of 2023</h5>
+														<span
+															><i class="fa-solid fa-location-dot"></i>New
+															Jersey, USA</span
+														>
+														<span
+															><i class="fa-solid fa-phone"></i>+123 456 789
+															6542</span
+														>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-12 col-md-4 col-lg-3 my-5">
+												<div class="city-item">
+													<img src="../assets/img/Rectangle 40940.png" alt="" />
+													<div class="city-content">
+														<h5>7 Best House Insurance Companies of 2023</h5>
+														<span
+															><i class="fa-solid fa-location-dot"></i>New
+															Jersey, USA</span
+														>
+														<span
+															><i class="fa-solid fa-phone"></i>+123 456 789
+															6542</span
+														>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-12 col-md-4 col-lg-3 my-5">
+												<div class="city-item">
+													<img src="../assets/img/Rectangle 40940.png" alt="" />
+													<div class="city-content">
+														<h5>7 Best House Insurance Companies of 2023</h5>
+														<span
+															><i class="fa-solid fa-location-dot"></i>New
+															Jersey, USA</span
+														>
+														<span
+															><i class="fa-solid fa-phone"></i>+123 456 789
+															6542</span
+														>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-12 col-md-4 col-lg-3 my-5">
+												<div class="city-item">
+													<img src="../assets/img/Rectangle 40940.png" alt="" />
+													<div class="city-content">
+														<h5>7 Best House Insurance Companies of 2023</h5>
+														<span
+															><i class="fa-solid fa-location-dot"></i>New
+															Jersey, USA</span
+														>
+														<span
+															><i class="fa-solid fa-phone"></i>+123 456 789
+															6542</span
+														>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-content" id="city_ifno" style="display: none">
 									<div class="tab-content-wrapper state-info">
-										<h4>About the State of NewJersey</h4>
-										<p>
+										<h4 id="city_title">About the City of Clifton</h4>
+										<p id="city_info_detail">
 											Google's automated ranking systems are designed to present
 											helpful, reliable information that's primarily created to
 											benefit people, not to gain search engine rankings, in the
@@ -309,7 +375,7 @@
 								</div>
 								<div class="tab-content" id="city" style="display: none">
 									<div class="tab-content-wrapper city">
-										<h4>Cities in NewJersey</h4>
+										<h4 id="cities_list">Nearby Cities</h4>
 										<div class="city-wrapper">
 											<div class="city-box">
 												<ul id="city_list_ul">
@@ -363,95 +429,53 @@
 											</div>
 										</div>
 									</div>
-									<div class="city-read-more-button">
-										<a id="add_more_city" href=""
-											>See More <i class="fa-solid fa-arrow-right"></i
-										></a>
-									</div>
 								</div>
 								<div class="tab-content" id="faq" style="display: none">
 									<div class="tab-content-wrapper acc">
 										<h4>Frequently Asked Questions</h4>
-										<div class="accordion">
-											<div
-												class="accordion-header"
-												onclick="toggleAccordion(this)">
-												<span
-													>How much does it cost to rent a dumpster in TX?</span
-												>
-												<span class="icon"
-													><i class="fa-solid fa-plus"></i
-												></span>
+										<div id="faqs_detail">
+											<div class="accordion">
+												<div
+													class="accordion-header"
+													onclick="toggleAccordion(this)">
+													<span style="color: black"
+														>How much does it cost to rent a dumpster in
+														TX?</span
+													>
+													<span class="icon"
+														><i class="fa-solid fa-plus"></i
+													></span>
+												</div>
+												<div class="accordion-content">
+													<p>
+														The cost of renting a dumpster in Texas can vary
+														depending on factors such as size, location, and
+														type of waste. Generally, a 10-yard dumpster can
+														cost anywhere from $200 to $600.
+													</p>
+												</div>
 											</div>
-											<div class="accordion-content">
-												<p>
-													The cost of renting a dumpster in Texas can vary
-													depending on factors such as size, location, and type
-													of waste. Generally, a 10-yard dumpster can cost
-													anywhere from $200 to $600.
-												</p>
-											</div>
-										</div>
 
-										<div class="accordion">
-											<div
-												class="accordion-header"
-												onclick="toggleAccordion(this)">
-												<span
-													>What size dumpster should I rent for my project in
-													TX?</span
-												>
-												<span class="icon"
-													><i class="fa-solid fa-plus"></i
-												></span>
-											</div>
-											<div class="accordion-content">
-												<p>
-													The cost of renting a dumpster in Texas can vary
-													depending on factors such as size, location, and type
-													of waste. Generally, a 10-yard dumpster can cost
-													anywhere from $200 to $600.
-												</p>
-											</div>
-										</div>
-										<div class="accordion">
-											<div
-												class="accordion-header"
-												onclick="toggleAccordion(this)">
-												<span
-													>What types of materials can I put in the dumpster
-													rental?</span
-												>
-												<span class="icon"
-													><i class="fa-solid fa-plus"></i
-												></span>
-											</div>
-											<div class="accordion-content">
-												<p>
-													The cost of renting a dumpster in Texas can vary
-													depending on factors such as size, location, and type
-													of waste. Generally, a 10-yard dumpster can cost
-													anywhere from $200 to $600.
-												</p>
-											</div>
-										</div>
-
-										<div class="accordion">
-											<div
-												class="accordion-header"
-												onclick="toggleAccordion(this)">
-												<span>How long can I keep the dumpster rental?</span>
-												<span class="icon"
-													><i class="fa-solid fa-plus"></i
-												></span>
-											</div>
-											<div class="accordion-content">
-												<p>
-													The cost of renting a dumpster in Texas can vary
-													depending on factors such as size, location, and type
-													of waste. Generally, a 10-yard dumpster can cost
-													anywhere from $200 to $600.
-												</p>
+											<div class="accordion">
+												<div
+													class="accordion-header"
+													onclick="toggleAccordion(this)">
+													<span
+														>What size dumpster should I rent for my project in
+														TX?</span
+													>
+													<span class="icon"
+														><i class="fa-solid fa-plus"></i
+													></span>
+												</div>
+												<div class="accordion-content">
+													<p>
+														The cost of renting a dumpster in Texas can vary
+														depending on factors such as size, location, and
+														type of waste. Generally, a 10-yard dumpster can
+														cost anywhere from $200 to $600.
+													</p>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -462,7 +486,7 @@
 										<div class="row">
 											<div class="col-sm-12 col-md-6 col-lg-4 my-5">
 												<div class="guide-item">
-													<img src="./assets/img/Rectangle 40940.png" alt="" />
+													<img src="../assets/img/Rectangle 40940.png" alt="" />
 													<div class="guide-content">
 														<span>House Insurance website</span>
 														<h5>7 Best House Insurance Companies of 2023</h5>
@@ -472,7 +496,7 @@
 											</div>
 											<div class="col-sm-12 col-md-6 col-lg-4 my-5">
 												<div class="guide-item">
-													<img src="./assets/img/Rectangle 40940.png" alt="" />
+													<img src="../assets/img/Rectangle 40940.png" alt="" />
 													<div class="guide-content">
 														<span>House Insurance website</span>
 														<h5>7 Best House Insurance Companies of 2023</h5>
@@ -482,7 +506,7 @@
 											</div>
 											<div class="col-sm-12 col-md-6 col-lg-4 my-5">
 												<div class="guide-item">
-													<img src="./assets/img/Rectangle 40940.png" alt="" />
+													<img src="../assets/img/Rectangle 40940.png" alt="" />
 													<div class="guide-content">
 														<span>House Insurance website</span>
 														<h5>7 Best House Insurance Companies of 2023</h5>
@@ -499,7 +523,6 @@
 				</div>
 			</div>
 		</div>
-
 		<!--  -->
 		<div class="section seclection-height">
 			<div class="seclection-process">

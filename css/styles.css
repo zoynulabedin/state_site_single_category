@@ -4426,7 +4426,6 @@ fieldset:disabled .btn {
 .accordion-header {
 	margin-bottom: 0;
 }
-
 .accordion-item {
 	color: var(--bs-accordion-color);
 	background-color: var(--bs-accordion-bg);
@@ -12131,4 +12130,31 @@ span {
 }
 .active-bg a {
 	color: #fff !important;
+}
+
+.navbar-nav li button {
+	background: transparent !important;
+	color: #fff !important;
+	border: none;
+	font-size: 0.75rem;
+	font-weight: 800;
+	letter-spacing: 0.0625em;
+	text-transform: uppercase;
+}
+
+.navbar-nav li button.active {
+	border-bottom: none !important;
+	color: #0d99ff !important;
+}
+
+.is-fixed .navbar-nav li button {
+	color: #000 !important;
+}
+
+.tab-content-item {
+	display: none;
+}
+
+.tab-content-item.active {
+	display: block;
 }
