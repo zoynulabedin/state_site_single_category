@@ -30,214 +30,16 @@
 })(jQuery);
 
 const cityNames = [
-	"New York",
-	"Los Angeles",
-	"Chicago",
-	"Houston",
-	"Phoenix",
-	"Philadelphia",
-	"San Antonio",
-	"San Diego",
-	"Dallas",
-	"San Jose",
-	"Austin",
-	"Jacksonville",
-	"San Francisco",
-	"Indianapolis",
-	"Columbus",
-	"Fort Worth",
-	"Charlotte",
-	"Seattle",
-	"Denver",
-	"El Paso",
-	"Detroit",
-	"Washington",
-	"Boston",
-	"Memphis",
-	"Nashville",
-	"Portland",
-	"Oklahoma City",
-	"Las Vegas",
-	"Baltimore",
-	"Louisville",
-	"Milwaukee",
-	"Albuquerque",
-	"Tucson",
-	"Fresno",
-	"Sacramento",
-	"Mesa",
-	"Kansas City",
-	"Atlanta",
-	"Long Beach",
-	"Colorado Springs",
-	"Raleigh",
-	"Miami",
-	"Virginia Beach",
-	"Omaha",
-	"Oakland",
-	"Minneapolis",
-	"Tulsa",
-	"Arlington",
-	"New Orleans",
-	"Wichita",
-	"Cleveland",
-	"Tampa",
-	"Bakersfield",
-	"Aurora",
-	"Anaheim",
-	"Honolulu",
-	"Santa Ana",
-	"Riverside",
-	"Corpus Christi",
-	"Lexington",
-	"Stockton",
-	"St. Louis",
-	"Saint Paul",
-	"Henderson",
-	"Pittsburgh",
-	"Cincinnati",
-	"Anchorage",
-	"Greensboro",
-	"Plano",
+	"Paterson",
+	"Passaic",
 	"Newark",
-	"Lincoln",
-	"Orlando",
-	"Irvine",
-	"Toledo",
+	"Elizabeth",
 	"Jersey City",
-	"Chula Vista",
-	"Durham",
-	"Fort Wayne",
-	"St. Petersburg",
-	"Laredo",
-	"Buffalo",
-	"Madison",
-	"Lubbock",
-	"Chandler",
-	"Scottsdale",
-	"Reno",
-	"Glendale",
-	"Norfolk",
-	"Winston-Salem",
-	"North Las Vegas",
-	"Irving",
-	"Chesapeake",
-	"Gilbert",
-	"Hialeah",
-	"Garland",
-	"Fremont",
-	"Richmond",
-	"Boise",
-	"San Bernardino",
-	"Spokane",
-	"Baton Rouge",
-	"Des Moines",
-	"Modesto",
-	"Birmingham",
-	"New York",
-	"Los Angeles",
-	"Chicago",
-	"Houston",
-	"Phoenix",
-	"Philadelphia",
-	"San Antonio",
-	"San Diego",
-	"Dallas",
-	"San Jose",
-	"Austin",
-	"Jacksonville",
-	"San Francisco",
-	"Indianapolis",
-	"Columbus",
-	"Fort Worth",
-	"Charlotte",
-	"Seattle",
-	"Denver",
-	"El Paso",
-	"Detroit",
-	"Washington",
-	"Boston",
-	"Memphis",
-	"Nashville",
-	"Portland",
-	"Oklahoma City",
-	"Las Vegas",
-	"Baltimore",
-	"Louisville",
-	"Milwaukee",
-	"Albuquerque",
-	"Tucson",
-	"Fresno",
-	"Sacramento",
-	"Mesa",
-	"Kansas City",
-	"Atlanta",
-	"Long Beach",
-	"Colorado Springs",
-	"Raleigh",
-	"Miami",
-	"Virginia Beach",
-	"Omaha",
-	"Oakland",
-	"Minneapolis",
-	"Tulsa",
-	"Arlington",
-	"New Orleans",
-	"Wichita",
-	"Cleveland",
-	"Tampa",
-	"Bakersfield",
-	"Aurora",
-	"Anaheim",
-	"Honolulu",
-	"Santa Ana",
-	"Riverside",
-	"Corpus Christi",
-	"Lexington",
-	"Stockton",
-	"St. Louis",
-	"Saint Paul",
-	"Henderson",
-	"Pittsburgh",
-	"Cincinnati",
-	"Anchorage",
-	"Greensboro",
-	"Plano",
-	"Newark",
-	"Lincoln",
-	"Orlando",
-	"Irvine",
-	"Toledo",
-	"Jersey City",
-	"Chula Vista",
-	"Durham",
-	"Fort Wayne",
-	"St. Petersburg",
-	"Laredo",
-	"Buffalo",
-	"Madison",
-	"Lubbock",
-	"Chandler",
-	"Scottsdale",
-	"Reno",
-	"Glendale",
-	"Norfolk",
-	"Winston-Salem",
-	"North Las Vegas",
-	"Irving",
-	"Chesapeake",
-	"Gilbert",
-	"Hialeah",
-	"Garland",
-	"Fremont",
-	"Richmond",
-	"Boise",
-	"San Bernardino",
-	"Spokane",
-	"Baton Rouge",
-	"Des Moines",
-	"Modesto",
-	"Birmingham",
+	"Hackensack",
+	"Teaneck",
+	"Fort Lee",
+	"Garfield",
+	"Paramus",
 ];
 
 const citiesPerPage = 20; // Number of cities to add per click
@@ -272,19 +74,24 @@ function addCities() {
 	currentCityIndex += citiesPerPage;
 
 	// Hide the "See More" button if all cities have been added
-	if (currentCityIndex >= cityNames.length) {
-		const seeMoreButton = document.getElementById("add_more_city");
-		seeMoreButton.style.display = "none";
+	if (document.getElementById("add_more_city")) {
+		if (currentCityIndex >= cityNames.length) {
+			const seeMoreButton = document.getElementById("add_more_city");
+			seeMoreButton.style.display = "none";
+		}
 	}
 }
 
 // Add an event listener to the "See More" button
-document
-	.getElementById("add_more_city")
-	.addEventListener("click", function (event) {
-		event.preventDefault();
-		addCities();
-	});
+
+if (document.getElementById("add_more_city")) {
+	document
+		.getElementById("add_more_city")
+		.addEventListener("click", function (event) {
+			event.preventDefault();
+			addCities();
+		});
+}
 
 // Initially add the first set of cities when the page loads
 addCities();
@@ -298,7 +105,6 @@ const contentDivs = document.querySelectorAll(".tab-content-item ");
 listItems.forEach((item, index) => {
 	item.addEventListener("click", () => {
 		// Hide all content divs
-		
 		contentDivs.forEach((contentDiv) => contentDiv.classList.remove("active"));
 		// Show the selected content div
 		contentDivs[index].classList.add("active");
@@ -308,4 +114,56 @@ listItems.forEach((item, index) => {
 		// Add .active-bg class to the clicked list item
 		item.classList.add("active-bg");
 	});
+});
+
+// JavaScript code
+// Get all buttons with the class "tab-button"
+const tabButtons = document.querySelectorAll(".tab-btn");
+
+// Add a click event listener to each button
+tabButtons.forEach((button) => {
+	button.addEventListener("click", function () {
+		// Set the new URL to navigate to the corresponding section
+		window.location.href = "#tab-section";
+	});
+});
+
+$(".listing").on("click", function () {
+	// Remove the .active class from .btn-city-list
+	$(".btn-city-list").removeClass("active");
+
+	// Add multiple classes to .btn-city-list
+	$(".btn-city-list").addClass("active");
+});
+
+$(".city-info").on("click", function () {
+	// Remove the .active class from .btn-city-list
+	$(".btn-city-info").removeClass("active");
+
+	// Add multiple classes to .btn-city-list
+	$(".btn-city-info").addClass("active");
+});
+
+$(".city").on("click", function () {
+	// Remove the .active class from .btn-city-list
+	$(".btn-city").removeClass("active");
+
+	// Add multiple classes to .btn-city-list
+	$(".btn-city").addClass("active");
+});
+
+$(".faq").on("click", function () {
+	// Remove the .active class from .btn-city-list
+	$(".btn-city-faq").removeClass("active");
+
+	// Add multiple classes to .btn-city-list
+	$(".btn-city-faq").addClass("active");
+});
+
+$(".guides").on("click", function () {
+	// Remove the .active class from .btn-city-list
+	$(".btn-city-guides").removeClass("active");
+
+	// Add multiple classes to .btn-city-list
+	$(".btn-city-guides").addClass("active");
 });

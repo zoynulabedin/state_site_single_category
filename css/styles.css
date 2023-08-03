@@ -11618,9 +11618,7 @@ a#nav-link {
 	padding: 31px;
 	padding-bottom: 15px;
 }
-header.masthead {
-	height: 998px;
-}
+
 .head-right span {
 	color: #fff;
 	background: #ffffff42;
@@ -11710,9 +11708,7 @@ input {
 	button.Learn.More {
 		margin-bottom: 50px;
 	}
-	header.masthead {
-		height: 700px;
-	}
+
 	.head-left h4 {
 		font-size: 24px;
 		line-height: 30px;
@@ -12011,6 +12007,9 @@ div#city_list {
 }
 
 @media only screen and (max-width: 767px) {
+	.search-wrapper.city-search button {
+		margin-left: 0px;
+	}
 	.tabs {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -12157,4 +12156,22 @@ span {
 
 .tab-content-item.active {
 	display: block;
+}
+header#hero {
+	position: relative;
+	z-index: 2;
+	border-bottom-style: wavy;
+	border-bottom-width: 5px;
+}
+
+header#hero:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	content: "";
+	background: #000;
+	opacity: 0.5;
 }
