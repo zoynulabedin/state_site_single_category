@@ -11638,10 +11638,14 @@ input {
 	padding: 10px;
 	color: #fff;
 	margin-right: 10px;
+	width: 100%;
+	border-radius: 5px;
 }
 
 .search-form input[type="text"] {
 	margin-right: 10px;
+	width: 100%;
+	border-radius: 5px;
 }
 /* For select dropdown */
 .search-form select::placeholder {
@@ -11710,7 +11714,7 @@ input {
 	}
 
 	.head-left h4 {
-		font-size: 24px;
+		font-size: 22px;
 		line-height: 30px;
 	}
 	.head-right {
@@ -12160,8 +12164,8 @@ span {
 header#hero {
 	position: relative;
 	z-index: 2;
-	border-bottom-style: wavy;
-	border-bottom-width: 5px;
+	background-position: center;
+	background-size: cover;
 }
 
 header#hero:before {
@@ -12174,4 +12178,18 @@ header#hero:before {
 	content: "";
 	background: #000;
 	opacity: 0.5;
+}
+
+/* category page */
+
+div#tab-section {
+	/* padding: 100px 0px; */
+	padding-top: 200px;
+}
+.wavy-border-bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
 }

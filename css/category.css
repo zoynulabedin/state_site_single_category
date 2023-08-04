@@ -1,0 +1,95 @@
+.state-category-blog-wrapper {
+	background: #fff;
+	padding: 50px 0px;
+}
+.state-blog-item .state-blog-content-wrapper h4 {
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.state-blog-item .state-blog-content-wrapper p {
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+.state-blog-content-wrapper {
+	padding-right: 30px;
+}
+
+.section-title h1 {
+	font-size: 40px;
+	font-weight: 600;
+	color: #000000;
+}
+.state-blog-item img {
+	max-width: 100%;
+}
+
+/* faq-section */
+
+.faq-section {
+	background: rgba(21, 31, 87, 0.05);
+	background-image: url("../assets/img/faq-bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	padding: 100px 0px;
+}
+
+div#faqs_detail\ category-faq .accordion {
+	border-bottom: none;
+	background: #fff;
+	border-radius: 5px;
+}
+.section.contact-section.category-contact {
+	padding: 0px;
+	padding-top: 50px;
+}
+
+.category-contact .contact-form h3 {
+	color: #fff;
+	font-family: Inter;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.category-contact input {
+	border-radius: 6px;
+	border: 1px solid #fff;
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(7.5px);
+}
+
+.category-contact textarea {
+	border-radius: 6px;
+	border: 1px solid #fff;
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(7.5px);
+}
+.category-contact button {
+	border-radius: 6px;
+	border: 1px solid #fff;
+	background: #fff;
+	backdrop-filter: blur(7.5px);
+	color: #109cf1;
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+.category-contact-photo img {
+	max-width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+	.state-blog-content-wrapper {
+		padding-right: 0px;
+	}
+	.state-blog-item {
+	}
+}
