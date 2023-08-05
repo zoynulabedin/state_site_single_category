@@ -167,3 +167,40 @@ $(".guides").on("click", function () {
 	// Add multiple classes to .btn-city-list
 	$(".btn-city-guides").addClass("active");
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+	const statePaths = document.querySelectorAll("#us-map path");
+	const tooltip = document.createElement("div");
+	tooltip.classList.add("state-tooltip");
+	document.body.appendChild(tooltip);
+
+	statePaths.forEach((statePath) => {
+		const stateName = statePath.getAttribute("data-name");
+
+		statePath.addEventListener("mouseenter", (event) => {
+			event.target.style.fill = "orange"; // Change the fill color on hover
+			tooltip.style.opacity = 1;
+			const { left, top } = event.target.getBoundingClientRect();
+			tooltip.style.left = `${left + 10}px`;
+			tooltip.style.top = `${top + 10}px`;
+			tooltip.textContent = stateName;
+		});
+
+		statePath.addEventListener("mouseleave", (event) => {
+			if (!event.target.classList.contains("clicked")) {
+				event.target.style.fill = ""; // Reset the fill color on mouseleave if not clicked
+			}
+			tooltip.style.opacity = 0;
+		});
+
+		statePath.addEventListener("click", (event) => {
+			statePaths.forEach((path) => {
+				path.classList.remove("clicked");
+				path.style.fill = ""; // Reset the fill color of all states
+			});
+
+			event.target.classList.add("clicked");
+			event.target.style.fill = "green"; // Change the fill color on click
+		});
+	});
+});
