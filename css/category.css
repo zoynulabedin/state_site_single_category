@@ -19,6 +19,12 @@
 tspan {
 	display: none !important;
 }
+.state-box {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	align-items: center;
+}
 .search-by-state h1 {
 	color: #000;
 	font-family: Inter;
@@ -169,6 +175,6 @@ div#faqs_detail\ category-faq .accordion {
 		font-size: 28px;
 	}
 	.col-md-6.d-flex.align-items-center.footer-right-row {
-	justify-content: center;
-}
+		justify-content: center;
+	}
 }
