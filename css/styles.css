@@ -12203,3 +12203,16 @@ div#tab-section {
 	right: 0;
 	width: 100%;
 }
+ul.breadcrumb li {
+	font-size: 18px;
+	line-height: 19px;
+}
+
+ul.breadcrumb li a {
+	padding-right: 6px;
+	color: #5199ff;
+}
+
+ul.breadcrumb li.current {
+	padding-left: 5px;
+}
