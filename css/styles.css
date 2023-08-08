@@ -12191,7 +12191,10 @@ header#hero:before {
 
 div#tab-section {
 	/* padding: 100px 0px; */
-	padding-top: 200px;
+	padding-top: 50px;
+}
+.wavy-border-bottom img {
+	width: 100%;
 }
 .wavy-border-bottom {
 	position: absolute;

@@ -74,7 +74,7 @@ var simplemaps_usmap_mapdata = {
 			description: "default",
 			color: "default",
 			hover_color: "default",
-			url: "default",
+			url: "",
 		},
 		AK: {
 			name: "<div class='state-box'> Alaska</div>",

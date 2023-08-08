@@ -25,6 +25,10 @@ tspan {
 	gap: 10px;
 	align-items: center;
 }
+
+.wavy-border-bottom img {
+	width: 100%;
+}
 .search-by-state h1 {
 	color: #000;
 	font-family: Inter;
